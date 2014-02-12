@@ -10,9 +10,12 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 
 apt-get install -y apache2 php5
 apt-get install -y mysql-client mysql-server
-apt-get install -y vim git zip unzip wget
+apt-get install -y vim git zip unzip curl wget
 apt-get install -y memcached imagemagick
-apt-get install -y php5-mysql php5-memcached php5-xdebug
+apt-get install -y php5-mysql php5-memcached php5-xdebug php5-curl php5-json
+
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 
 apt-get install -y nodejs
 npm install -g grunt-cli
